@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- TextView برای نمایش عملیات و نتیجه -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="0"
+        android:textSize="36sp"
+        android:padding="16dp"
+        android:background="#DDDDDD"
+        android:textColor="#000000"/>
+
+    <!-- GridLayout برای دکمه‌ها -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:padding="16dp">
+
+        <!-- دکمه‌های اعداد و عملیات -->
+
+        <Button
+            android:text="7"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="8"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="9"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="÷"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <!-- سایر دکمه‌های عددی و عملیاتی -->
+
+        <Button
+            android:text="4"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="5"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="6"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="×"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <!-- ادامه دکمه‌ها برای اعداد و عملیات -->
+        <Button
+            android:text="1"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="2"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="3"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="-"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="C"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="0"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="="
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="+"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"/>
+
+    </GridLayout>
+</LinearLayout>

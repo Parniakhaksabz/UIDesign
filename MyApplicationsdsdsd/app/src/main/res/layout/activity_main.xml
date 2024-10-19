@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="0"
+        android:textSize="36sp"
+        android:padding="16dp"
+        android:background="#DDDDDD"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:padding="16dp">
+
+        <!-- Buttons for numbers and operations -->
+        <Button
+            android:text="C"
+            android:onClick="onButtonClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="()"
+            android:onClick="onButtonClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="%"
+            android:onClick="onButtonClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="<<"
+            android:onClick="onButtonClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_weight="1"/>
+
+        <!-- Add remaining buttons in a similar way -->
+
+    </GridLayout>
+
+</LinearLayout>
