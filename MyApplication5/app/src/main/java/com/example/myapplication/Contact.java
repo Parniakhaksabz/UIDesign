@@ -4,12 +4,12 @@ package com.example.myapplication;
 public class Contact {
     private String name;
     private String phoneNumber;
-    private int profileImage;
+    private int imageResId;
 
-    public Contact(String name, String phoneNumber, int profileImage) {
+    public Contact(String name, String phoneNumber, int imageResId) {
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.profileImage = profileImage;
+        this.imageResId = imageResId;
     }
 
     public String getName() {
@@ -20,7 +20,7 @@ public class Contact {
         return phoneNumber;
     }
 
-    public int getProfileImage() {
-        return profileImage;
+    public int getImageResId() {
+        return imageResId;
     }
 }

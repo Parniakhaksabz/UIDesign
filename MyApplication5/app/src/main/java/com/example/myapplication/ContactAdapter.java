@@ -5,50 +5,30 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.BaseAdapter;
+
 import java.util.List;
 
-public class ContactAdapter extends BaseAdapter {
-    private Context context;
-    private List<Contact> contacts;
-
+public class ContactAdapter extends ArrayAdapter<Contact> {
     public ContactAdapter(Context context, List<Contact> contacts) {
-        this.context = context;
-        this.contacts = contacts;
-    }
-
-    @Override
-    public int getCount() {
-        return contacts.size();
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return contacts.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
+        super(context, 0, contacts);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        Contact contact = getItem(position);
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.contact_item, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_contact, parent, false);
         }
+        TextView nameTextView = convertView.findViewById(R.id.contact_name);
+        TextView phoneTextView = convertView.findViewById(R.id.contact_phone);
+        ImageView imageView = convertView.findViewById(R.id.contact_image);
 
-        Contact contact = contacts.get(position);
-
-        ImageView profileImage = convertView.findViewById(R.id.profile_image);
-        TextView name = convertView.findViewById(R.id.name);
-        TextView phoneNumber = convertView.findViewById(R.id.phone_number);
-
-        profileImage.setImageResource(contact.getProfileImage());
-        name.setText(contact.getName());
-        phoneNumber.setText(contact.getPhoneNumber());
+        nameTextView.setText(contact.getName());
+        phoneTextView.setText(contact.getPhoneNumber());
+        imageView.setImageResource(contact.getImageResId());
 
         return convertView;
     }
